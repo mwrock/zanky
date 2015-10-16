@@ -1,0 +1,11 @@
+c:\users\steve\documents\visual studio 2015\Projects\Chef.PowerShell\Chef.PowerShell\bin\Debug\Chef.PowerShell.dll
+c:\users\steve\documents\visual studio 2015\Projects\Chef.PowerShell\Chef.PowerShell\bin\Debug\Chef.PowerShell.pdb
+c:\users\steve\documents\visual studio 2015\Projects\Chef.PowerShell\Chef.PowerShell\bin\Debug\System.Management.Automation.dll
+c:\users\steve\documents\visual studio 2015\Projects\Chef.PowerShell\Chef.PowerShell\obj\Debug\Chef.PowerShell.csprojResolveAssemblyReference.cache
+c:\users\steve\documents\visual studio 2015\Projects\Chef.PowerShell\Chef.PowerShell\obj\Debug\Chef.PowerShell.dll
+c:\users\steve\documents\visual studio 2015\Projects\Chef.PowerShell\Chef.PowerShell\obj\Debug\Chef.PowerShell.pdb
+C:\dev\embed\Chef.PowerShell\Chef.PowerShell\bin\Debug\Chef.PowerShell.dll
+C:\dev\embed\Chef.PowerShell\Chef.PowerShell\bin\Debug\Chef.PowerShell.pdb
+C:\dev\embed\Chef.PowerShell\Chef.PowerShell\obj\Debug\Chef.PowerShell.csprojResolveAssemblyReference.cache
+C:\dev\embed\Chef.PowerShell\Chef.PowerShell\obj\Debug\Chef.PowerShell.dll
+C:\dev\embed\Chef.PowerShell\Chef.PowerShell\obj\Debug\Chef.PowerShell.pdb
