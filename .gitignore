@@ -1,1 +1,9 @@
+Debug/**
+Chef.PowerShell/bin/**
+Chef.PowerShell/obj/**
+CppHostCLR/CppHostCLR/Debug/**
 *.dll
+*.pdb
+*.exe
+*.idb
+*.user

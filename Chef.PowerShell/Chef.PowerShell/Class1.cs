@@ -21,13 +21,12 @@ namespace Chef.PowerShell
             ps.RunspacePool = rp;
         }
 
-        public static int ExecutePs(string input)
+        public static string ExecutePs(string input)
         {
-            var script = "'" + input + "'.length";
-            ps.AddScript(script);
-            var result = ps.Invoke().First().BaseObject;
-            int number = (result as int?).Value;
-            return number;
+            ps.AddScript(input);
+            ps.AddCommand("ConvertTo-JSON");
+            var result = ps.Invoke().First().BaseObject.ToString();
+            return result;
         }
     }
 }

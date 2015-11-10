@@ -92,8 +92,8 @@ HRESULT RuntimeHostV4Demo1(PCWSTR pszVersion, PCWSTR pszAssemblyName,
     bstr_t bstrStaticMethodName(L"ExecutePs");
     SAFEARRAY *psaStaticMethodArgs = NULL;
 	SAFEARRAY *psaStaticMethodArgs2 = NULL;
-	variant_t vtStringArg(L"blah");
-	variant_t vtStringArg2(L"blahblah");
+	variant_t vtStringArg(L"dir");
+	variant_t vtStringArg2(L"test-path 'Chef.PowerShell.dll'");
 	variant_t vtLengthRet;
 
     // The instance method in the .NET class to invoke.
@@ -246,11 +246,11 @@ HRESULT RuntimeHostV4Demo1(PCWSTR pszVersion, PCWSTR pszAssemblyName,
     }
 
     // Print the call result of the static method.
-    wprintf(L"Call %s.%s(\"%s\") => %d\n", 
+    wprintf(L"Call %s.%s(\"%s\") => %s\n", 
         static_cast<PCWSTR>(bstrClassName), 
         static_cast<PCWSTR>(bstrStaticMethodName), 
         static_cast<PCWSTR>(vtStringArg.bstrVal), 
-        vtLengthRet.lVal);
+        static_cast<PCWSTR>(vtLengthRet.bstrVal));
 
 	// Invoke the "GetStringLength" method from the Type interface.
 	hr = spType->InvokeMember_3(bstrStaticMethodName, static_cast<BindingFlags>(
@@ -263,17 +263,17 @@ HRESULT RuntimeHostV4Demo1(PCWSTR pszVersion, PCWSTR pszAssemblyName,
 	}
 
 	// Print the call result of the static method.
-	wprintf(L"Call %s.%s(\"%s\") => %d\n",
+	wprintf(L"Call %s.%s(\"%s\") => %s\n",
 		static_cast<PCWSTR>(bstrClassName),
 		static_cast<PCWSTR>(bstrStaticMethodName),
 		static_cast<PCWSTR>(vtStringArg2.bstrVal),
-		vtLengthRet.lVal);
+		static_cast<PCWSTR>(vtLengthRet.bstrVal));
 
 
 
 
     // Instantiate the class.
-    hr = spAssembly->CreateInstance(bstrClassName, &vtObject);
+   /* hr = spAssembly->CreateInstance(bstrClassName, &vtObject);
     if (FAILED(hr))
     {
         wprintf(L"Assembly::CreateInstance failed w/hr 0x%08lx\n", hr);
@@ -301,6 +301,7 @@ HRESULT RuntimeHostV4Demo1(PCWSTR pszVersion, PCWSTR pszAssemblyName,
         static_cast<PCWSTR>(bstrClassName), 
         static_cast<PCWSTR>(bstrMethodName), 
         static_cast<PCWSTR>(vtStringRet.bstrVal));
+		*/
 
 Cleanup:
 
